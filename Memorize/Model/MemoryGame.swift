@@ -21,7 +21,7 @@ struct MemoryGame<CardContent> {
                  return index
             }
         }
-        return 0
+        return 0 
     }
     
     init(numberOfpairsCards: Int, createCardContent: (Int) -> CardContent) {
@@ -29,7 +29,7 @@ struct MemoryGame<CardContent> {
         for pairIndex in 0..<numberOfpairsCards {
             let content = createCardContent(pairIndex)
             cards.append(Card(content: content, id: pairIndex*2))
-            cards.append(Card(content: content,id: pairIndex*2+1))
+            cards.append(Card(content: content, id: pairIndex*2+1))
         }
     }
     
